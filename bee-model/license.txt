@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vespa Velutina Flavitarsus
+* source:	https://sketchfab.com/3d-models/vespa-velutina-flavitarsus-5b148f065fb94135b81e8bdf3fa28297
+* author:	Nobilis (https://sketchfab.com/nobilishornet)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vespa Velutina Flavitarsus" (https://sketchfab.com/3d-models/vespa-velutina-flavitarsus-5b148f065fb94135b81e8bdf3fa28297) by Nobilis (https://sketchfab.com/nobilishornet) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

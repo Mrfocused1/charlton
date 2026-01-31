@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Pest Hiding Spots - House Cross-Section Diagram
+  Charlton Pest Control - UK Residential Property Inspection Guide
+
+  8 Accurate Pest Hiding Locations Based on UK Research:
+  1. Roof Eaves & Soffits - Wasps, Birds, Squirrels
+  2. Loft Insulation - Mice, Rats, Squirrels
+  3. Chimney & Flashing - Birds, Wasps
+  4. Window Frames - Ants, Wasps, Small Mice
+  5. Wall Cavities - Mice, Rats
+  6. Beds & Mattress - Bed Bugs
+  7. Kitchen Plumbing - Cockroaches, Mice, Ants
+  8. Basement/Crawl Space - Rats, Mice, Silverfish, Beetles
+
+  Brand Color: #cfaf6a (Gold)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <defs>
+    <style>
+      /* Animation Styles */
+      .marker-line {
+        stroke: #cfaf6a;
+        stroke-width: 2;
+        fill: none;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        transition: stroke-dashoffset 0.6s ease-out;
+      }
+      .marker-line.active { stroke-dashoffset: 0; }
+
+      .marker-dot {
+        fill: #cfaf6a;
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform 0.3s ease-out;
+      }
+      .marker-dot.active { transform: scale(1); }
+
+      .marker-dot-outline {
+        fill: none;
+        stroke: #cfaf6a;
+        stroke-width: 2;
+        opacity: 0;
+        transform-origin: center;
+        transition: opacity 0.3s ease-out;
+      }
+      .marker-dot-outline.active {
+        opacity: 0.4;
+        animation: pulse-ring 1.5s ease-out infinite;
+      }
+
+      @keyframes pulse-ring {
+        0% { transform: scale(1); opacity: 0.4; }
+        100% { transform: scale(1.5); opacity: 0; }
+      }
+
+      /* House Structure */
+      .house-wall { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 3; }
+      .house-roof { fill: #cbd5e1; }
+      .house-roof-inner { fill: #e2e8f0; }
+      .floor-line { stroke: #cbd5e1; stroke-width: 2; stroke-dasharray: 8,4; }
+      .window { fill: #bfdbfe; stroke: #94a3b8; stroke-width: 2; }
+      .door { fill: #a78bfa; stroke: #7c3aed; stroke-width: 2; }
+      .chimney { fill: #d4d4d8; stroke: #a1a1aa; stroke-width: 2; }
+      .basement { fill: #e7e5e4; stroke: #a8a29e; stroke-width: 2; }
+      .detail { fill: none; stroke: #94a3b8; stroke-width: 1.5; }
+      .insulation { fill: #fef3c7; opacity: 0.6; }
+      .pipe { stroke: #6b7280; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .furniture { fill: #d1d5db; stroke: #9ca3af; stroke-width: 1.5; }
+      .bed { fill: #e0e7ff; stroke: #a5b4fc; stroke-width: 1.5; }
+      .svg-label { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 8px; fill: #6b7280; }
+    </style>
+  </defs>
+
+  <!-- CHIMNEY -->
+  <rect class="chimney" x="280" y="25" width="25" height="50"/>
+  <rect fill="#525252" x="277" y="22" width="31" height="6" rx="1"/>
+
+  <!-- ROOF -->
+  <polygon class="house-roof" points="200,20 60,95 340,95"/>
+  <polygon class="house-roof-inner" points="200,32 80,95 320,95"/>
+
+  <!-- LOFT INSULATION (visible through cutaway) -->
+  <path class="insulation" d="M90,95 Q120,85 150,95 Q180,85 200,95 Q230,85 260,95 Q290,85 310,95 L310,110 L90,110 Z"/>
+
+  <!-- MAIN WALLS -->
+  <rect class="house-wall" x="75" y="95" width="250" height="155"/>
+
+  <!-- FLOOR DIVIDER - Ground Floor / First Floor -->
+  <line class="floor-line" x1="75" y1="170" x2="325" y2="170"/>
+
+  <!-- BASEMENT/CRAWL SPACE -->
+  <rect class="basement" x="75" y="250" width="250" height="45"/>
+  <text class="svg-label" x="185" y="278" text-anchor="middle">CRAWL SPACE</text>
+
+  <!-- LOFT SPACE LABEL -->
+  <text class="svg-label" x="200" y="85" text-anchor="middle">LOFT</text>
+
+  <!-- FIRST FLOOR LABEL -->
+  <text class="svg-label" x="200" y="140" text-anchor="middle">FIRST FLOOR</text>
+
+  <!-- GROUND FLOOR LABEL -->
+  <text class="svg-label" x="200" y="215" text-anchor="middle">GROUND FLOOR</text>
+
+  <!-- WINDOWS -->
+  <!-- First Floor Left Window -->
+  <rect class="window" x="100" y="115" width="35" height="40"/>
+  <line class="detail" x1="117.5" y1="115" x2="117.5" y2="155"/>
+  <line class="detail" x1="100" y1="135" x2="135" y2="135"/>
+
+  <!-- First Floor Right Window -->
+  <rect class="window" x="265" y="115" width="35" height="40"/>
+  <line class="detail" x1="282.5" y1="115" x2="282.5" y2="155"/>
+  <line class="detail" x1="265" y1="135" x2="300" y2="135"/>
+
+  <!-- Ground Floor Left Window (Kitchen) -->
+  <rect class="window" x="100" y="190" width="35" height="40"/>
+  <line class="detail" x1="117.5" y1="190" x2="117.5" y2="230"/>
+  <line class="detail" x1="100" y1="210" x2="135" y2="210"/>
+
+  <!-- Front Door -->
+  <rect class="door" x="260" y="195" width="40" height="55"/>
+  <circle fill="#fbbf24" cx="290" cy="225" r="3"/>
+
+  <!-- BED (First Floor - Bedroom) -->
+  <rect class="bed" x="155" y="130" width="55" height="30"/>
+  <rect fill="#c7d2fe" x="155" y="130" width="55" height="8"/>
+
+  <!-- KITCHEN DETAILS (Ground Floor) -->
+  <!-- Counter/Cabinet -->
+  <rect class="furniture" x="150" y="195" width="50" height="35"/>
+  <!-- Sink basin -->
+  <rect fill="#93c5fd" x="160" y="200" width="30" height="15" rx="2"/>
+  <!-- Pipe under sink -->
+  <path class="pipe" d="M175,215 L175,230 Q175,240 185,240 L200,240"/>
+
+  <!-- WALL CAVITY (shown as cutaway) -->
+  <rect fill="#fef9c3" opacity="0.5" x="322" y="120" width="8" height="80"/>
+  <text class="svg-label" x="326" y="165" transform="rotate(90, 326, 165)" text-anchor="middle">CAVITY</text>
+
+  <!-- SKIRTING BOARD DETAIL -->
+  <rect fill="#9ca3af" x="75" y="245" width="250" height="5"/>
+
+  <!-- FLOORBOARD LINES -->
+  <line stroke="#d1d5db" stroke-width="1" x1="85" y1="250" x2="315" y2="250"/>
+
+  <!-- ========================================= -->
+  <!-- PEST HIDING SPOT MARKERS (8 locations) -->
+  <!-- ========================================= -->
+
+  <!-- 1. ROOF EAVES/SOFFIT - Wasps, Birds, Squirrels -->
+  <g id="spot-eaves" class="pest-marker">
+    <circle class="marker-dot-outline" cx="72" cy="90" r="12"/>
+    <circle class="marker-dot" cx="72" cy="90" r="6"/>
+    <path class="marker-line" d="M72,90 L35,90 L35,65"/>
+  </g>
+
+  <!-- 2. LOFT INSULATION - Mice, Rats, Squirrels nesting -->
+  <g id="spot-loft" class="pest-marker">
+    <circle class="marker-dot-outline" cx="200" cy="102" r="12"/>
+    <circle class="marker-dot" cx="200" cy="102" r="6"/>
+    <path class="marker-line" d="M200,102 L200,55 L240,55"/>
+  </g>
+
+  <!-- 3. CHIMNEY GAPS - Birds, Wasps entry -->
+  <g id="spot-chimney" class="pest-marker">
+    <circle class="marker-dot-outline" cx="292" cy="35" r="12"/>
+    <circle class="marker-dot" cx="292" cy="35" r="6"/>
+    <path class="marker-line" d="M292,35 L340,35 L365,35"/>
+  </g>
+
+  <!-- 4. WINDOW FRAMES - Ants, Wasps, small rodents -->
+  <g id="spot-window" class="pest-marker">
+    <circle class="marker-dot-outline" cx="100" cy="135" r="12"/>
+    <circle class="marker-dot" cx="100" cy="135" r="6"/>
+    <path class="marker-line" d="M100,135 L45,135"/>
+  </g>
+
+  <!-- 5. WALL CAVITIES - Mice, Rats travel routes -->
+  <g id="spot-wall" class="pest-marker">
+    <circle class="marker-dot-outline" cx="326" cy="145" r="12"/>
+    <circle class="marker-dot" cx="326" cy="145" r="6"/>
+    <path class="marker-line" d="M326,145 L370,145"/>
+  </g>
+
+  <!-- 6. BEDROOM/MATTRESS - Bed bugs -->
+  <g id="spot-bed" class="pest-marker">
+    <circle class="marker-dot-outline" cx="182" cy="140" r="12"/>
+    <circle class="marker-dot" cx="182" cy="140" r="6"/>
+    <path class="marker-line" d="M182,140 L182,165"/>
+  </g>
+
+  <!-- 7. KITCHEN PLUMBING - Cockroaches, Mice -->
+  <g id="spot-kitchen" class="pest-marker">
+    <circle class="marker-dot-outline" cx="175" cy="225" r="12"/>
+    <circle class="marker-dot" cx="175" cy="225" r="6"/>
+    <path class="marker-line" d="M175,225 L45,225"/>
+  </g>
+
+  <!-- 8. BASEMENT/CRAWL SPACE - Rats, Mice, Damp-loving insects -->
+  <g id="spot-basement" class="pest-marker">
+    <circle class="marker-dot-outline" cx="200" cy="270" r="12"/>
+    <circle class="marker-dot" cx="200" cy="270" r="6"/>
+    <path class="marker-line" d="M200,270 L200,305"/>
+  </g>
+</svg>

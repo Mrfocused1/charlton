@@ -1,12 +1,14 @@
 {
-  "name": "template-empty",
+  "name": "video-generator",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Prompt-based video generator with Remotion",
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "generate": "npx ts-node generate-video.ts",
+    "render": "remotion render MediaVideo out/video.mp4"
   },
   "repository": {},
   "license": "UNLICENSED",
@@ -18,10 +20,12 @@
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "^4.0.0",
+    "@types/node": "^20.0.0",
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
     "prettier": "3.6.0",
+    "ts-node": "^10.9.2",
     "typescript": "5.9.3"
   },
   "private": true
